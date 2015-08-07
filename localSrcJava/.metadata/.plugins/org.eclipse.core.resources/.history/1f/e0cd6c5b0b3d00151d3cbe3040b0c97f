@@ -57,58 +57,10 @@ public class MyArrayList<AnyType> implements Iterable<AnyType> {
 		return true;
 	}
 	
-	public void add(int idx, AnyType x){
-		if(theItems.length == size()){
-			ensureCapacity(size() * 2 + 1);
-		}
-		for(int i = size(); i > idx; i--){
-			theItems[i] = theItems[i-1];
-		}
-		theItems[idx] = x;
-		theSize++;
-	}
-	
-	public AnyType remove(int idx){
-		AnyType removeItem = theItems[idx];
-		for(int i = idx; i < size() - 1; i++ ){
-			theItems[i] = theItems[i + 1];
-		}
-		theSize--;
-		return removeItem;
-	}
-	
-	
 	
 	@Override
 	public Iterator<AnyType> iterator() {
 		// TODO Auto-generated method stub
-		return new ArrayListIterator();
-	}
-	
-	private class ArrayListIterator implements Iterator<AnyType>{
-		
-		private int current = 0;
-
-		@Override
-		public boolean hasNext() {
-			// TODO Auto-generated method stub
-			return current < size();
-		}
-
-		@Override
-		public AnyType next() {
-			// TODO Auto-generated method stub
-			if(!hasNext()){
-				throw new java.util.NoSuchElementException();
-			}
-			return theItems[current++];
-		}
-
-		@Override
-		public void remove() {
-			// TODO Auto-generated method stub
-			MyArrayList.this.remove(--current);
-		}
-		
+		return null;
 	}
 }
