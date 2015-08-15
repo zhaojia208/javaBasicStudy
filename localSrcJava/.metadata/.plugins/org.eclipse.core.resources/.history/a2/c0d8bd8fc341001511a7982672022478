@@ -1,0 +1,26 @@
+import java.util.Iterator;
+
+
+public class MyLinkedList<T> implements Iterable{
+	
+	private static class Node<T>{
+		public Node(T d, Node<T> p, Node<T> n){
+			this.date = d;
+			this.prev = p;
+			this.next = n
+		}
+		public T date;
+		public Node prev;
+		public Node next;
+	}
+
+	@Override
+	public Iterator iterator() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	
+
+}
